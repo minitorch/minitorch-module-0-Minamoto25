@@ -72,8 +72,13 @@ def sigmoid(x: float) -> float:
     for stability.
     """
     # TODO: Implement for Task 0.1.
-    exp = math.exp
-    return 1.0 / (1.0 + exp(-x)) if x >= 0 else exp(x) / (1.0 + exp(x))
+    e = math.e
+    if x>=0:
+        z = e**(-x)
+        return 1.0 / (1 + z)
+    else:
+        z = e**x
+        return z / (1.0 + z)
 
 
 def relu(x: float) -> float:
