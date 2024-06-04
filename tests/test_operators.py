@@ -99,7 +99,7 @@ def test_eq(a: float) -> None:
 
 
 @pytest.mark.task0_2
-@given(small_floats)
+@given(small_floats, small_floats)
 def test_sigmoid(a: float , b: float) -> None:
     """Check properties of the sigmoid function, specifically
     * It is always between 0.0 and 1.0.
